@@ -20,5 +20,9 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Configura las variables de ambiente
+Se requiere la configuracion del token de Mapbox dentro de las variables de ambiente con el nombre: VUE_APP_MAPBOX
+```
+
+###Prueba esta aplicacion
+See [Pagina en vivo](https://lucky-kleicha-465d4c.netlify.app/#/).
