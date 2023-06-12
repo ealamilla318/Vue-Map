@@ -1,18 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <MapView />
+  <SearchBar/>
+  <MyLocationBtn/>
+  <TripDetails/>
 </template>
 
 <script lang="ts">
+import { usePlacesStore } from '@/composables';
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import MapView from '@/components/mapView/MapView.vue';
+import MyLocationBtn from '@/components/my-location-btn/MyLocationBtn.vue';// @ is an alias to /src
+import SearchBar from '@/components/searchbar/SearchBar.vue';
+import TripDetails from '@/components/trip-details/TripDetais.vue';
 
 export default defineComponent({
-  name: 'HomeView',
   components: {
-    HelloWorld,
+    MapView,
+    MyLocationBtn,
+    SearchBar,
+    TripDetails
   },
+  setup() {
+    usePlacesStore();
+  }
 });
 </script>
